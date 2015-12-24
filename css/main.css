@@ -1,3 +1,15 @@
 .center{
     text-align: center;
 }
+
+@font-face{
+    font-family: 'prstart'; src: url('/fonts/PrStart.ttf');
+}
+
+header{
+    font-family: 'prstart', sans-serif;
+}
+
+canvas{
+    margin: auto; /* esto centra el canvas */
+}
