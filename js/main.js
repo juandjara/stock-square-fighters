@@ -78,28 +78,28 @@ document.addEventListener("DOMContentLoaded", function(ev){
         game.physics.arcade.collide(player2, platforms);
         game.physics.arcade.collide(player1, player2);
         
-        player1.body.velocity.x = 0;
-        if(cursors.right.isDown){
-            player1.body.velocity.x = 150;
-        }
-        else if(cursors.left.isDown){
-            player1.body.velocity.x = -150;
-        }
-        
-        if(cursors.up.isDown && player1.body.touching.down){
-            player1.body.velocity.y = -300;
-        }
-        
         player2.body.velocity.x = 0;
-        if(wasd.right.isDown){
+        if(cursors.right.isDown){
             player2.body.velocity.x = 150;
         }
-        else if(wasd.left.isDown){
+        else if(cursors.left.isDown){
             player2.body.velocity.x = -150;
         }
         
-        if(wasd.up.isDown && player2.body.touching.down){
+        if(cursors.up.isDown && player2.body.touching.down){
             player2.body.velocity.y = -300;
+        }
+        
+        player1.body.velocity.x = 0;
+        if(wasd.right.isDown){
+            player1.body.velocity.x = 150;
+        }
+        else if(wasd.left.isDown){
+            player1.body.velocity.x = -150;
+        }
+        
+        if(wasd.up.isDown && player1.body.touching.down){
+            player1.body.velocity.y = -300;
         }
         
     }
